@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        h1, .only-div{
+            text-align: center;
+            margin-top: 30px;
+        }
+        .only-div{
+            width: 500px;
+            margin: auto;
+        }
+        #result{
+            font-size: 72px;
+        }
+    </style>
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    <br>
+    <div class="input-group input-group-lg only-div">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Hight in CM</span>
+        <input id="hight" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+    <br>
+    <div class="input-group input-group-lg only-div">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Weight in KG</span>
+        <input id="weight" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+    <br>
+    <div class="d-flex justify-content-center"><button onclick="calBmi()" type="button" class="btn btn-primary">Calculate</button>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center">
+        <p>Your BMI is: </p>
+    </div>
+    <div class="d-flex justify-content-center">
+        <p id="result"></p>
+    </div>
+    <script>
+        function calBmi(){
+            const hight = document.getElementById('hight').value
+            const weight = document.getElementById('weight').value
+            result = document.getElementById('result')
+            bmi = weight / ((hight / 100)**2)
+            console.log(bmi)
+            result.innerHTML = bmi
+        }
+    </script>
+</body>
+</html>
