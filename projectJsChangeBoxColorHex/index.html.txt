@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .first-class{
+            width: 300px;
+            height: 300px;
+            border: solid;
+            /* display: grid;
+            place-items: center;  */
+            margin: auto;
+            background-color: yellow;
+        }
+        .sec-class{
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        changeColorOfDiv
+    </h1>
+    <div class="first-class"></div>
+    <div class="sec-class">
+        <button>Click to Change Color</button>
+    </div>
+    <script>
+        const btnTarget = document.querySelector('button')
+        btnTarget.addEventListener('click',randomColorGenerator)
+
+        // btnTarget.addEventListener('click',()=>{
+        //     console.log('function is working fine')
+        //     randomSixDigitNum = Math.round((Math.random()*900000+100000))
+        //     color = '#' + randomSixDigitNum
+        //     box = document.getElementsByClassName('first-class')[0]
+        //     box.style.backgroundColor = color 
+        // })
+
+
+        function randomColorGenerator(){
+            console.log('function is working fine')
+            const randomSixDigitNum = Math.round((Math.random()*900000+100000))
+            const color = '#' + randomSixDigitNum
+            box = document.getElementsByClassName('first-class')[0]
+            box.style.backgroundColor = color
+        }
+    </script>
+</body>
+</html>

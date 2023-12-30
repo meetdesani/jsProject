@@ -41,29 +41,31 @@
     <div class="input-group input-group-lg container-sm" style="width: 800px;">
         <span class="input-group-text" id="inputGroup-sizing-lg">addLanguage</span>
         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-        <button id="btn1" class="btn btn-primary" type="submit" onclick="addlan()">Add</button>
+        <!-- <button id="btn1" class="btn btn-primary" type="submit" onclick="addlan()">Add</button> -->
+        <button id="btn1" class="btn btn-primary" type="submit">Add</button>
     </div>
       
     <!-- End Example Code -->
     <script>
-        function addlan(){
-            lan = document.querySelector('input').value 
-            console.log(lan)
-            const li = document.createElement('li')
-            li.appendChild(document.createTextNode(lan))
-            document.querySelector('ul').appendChild(li)
-        }
-
-
-
-        // btn = document.querySelector('button')
-        // console.log(btn)
-        // lan = document.querySelector('input')
-        // btn.addEventListener ('click',function(){
+        // function addlan(){
+        //     lan = document.querySelector('input').value 
+        //     console.log(lan)
         //     const li = document.createElement('li')
         //     li.appendChild(document.createTextNode(lan))
         //     document.querySelector('ul').appendChild(li)
-        // })
+        // }
+
+
+
+        btn = document.querySelector('button')
+        console.log(btn)
+        
+        document.getElementById("btn1").addEventListener ('click',function(){
+          lan = document.querySelector('input').value
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(lan))
+            document.querySelector('ul').appendChild(li)
+        })
     </script>
   </body>
 </html>

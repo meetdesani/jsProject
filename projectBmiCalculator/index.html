@@ -41,6 +41,41 @@
     <div class="d-flex justify-content-center">
         <p id="result"></p>
     </div>
+    <h2 class='container-sm d-flex justify-content-center'>
+        Body Mass Index Guide
+    </h2>
+    <div >
+        <table class="table table-hover table-dark container-sm">
+            <thead>
+              <tr>
+                <th scope="col">BMI Value</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Under Weight</td>
+                <td>Less than 18</td>
+              </tr>
+              <tr>
+                <td>Normal</td>
+                <td>18 to 25</td>
+              </tr>
+              <tr>
+                <td>Over Weight</td>
+                <td>25 to 30</td>
+              </tr>
+              <tr>
+                <td>Obase</td>
+                <td>30 to 34</td>
+              </tr>
+              <tr>
+                <td>Extrem Obses</td>
+                <td>More than 34</td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
     <script>
         function calBmi(){
             const hight = document.getElementById('hight').value
